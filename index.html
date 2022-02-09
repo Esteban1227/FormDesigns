@@ -24,19 +24,71 @@
                             <form id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
-                                    <li class="active" id="account"><strong>Account</strong></li>
+                                    <li class="active" id="account"><strong>Mi Domicilio</strong></li>
                                     <li id="personal"><strong>Personal</strong></li>
                                     <li id="payment"><strong>Payment</strong></li>
-                                    <li id="confirm"><strong>Finish</strong></li>
+                                    <li id="commercial"><strong>Informacion Comercial</strong></li>
                                     <li id="confirm"><strong>Finish</strong></li>
                                 </ul> <!-- fieldsets -->
                                 <fieldset>
                                     <div class="form-card">
-                                        <h2 class="fs-title">Account Information</h2> <input type="email" name="email"
-                                            placeholder="Email Id" /> <input type="text" name="uname"
-                                            placeholder="UserName" /> <input type="password" name="pwd"
-                                            placeholder="Password" /> <input type="password" name="cpwd"
-                                            placeholder="Confirm Password" />
+                                        <!-- <h2 class="fs-title">Account Information</h2> --> 
+                                            <label for="department"> Departamento *</label>
+                                            <select class="custom-select" id="department">
+                                                <option selected>Selecciona tu Departamento</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select> 
+                                            <label for="city"> Ciudad *</label>
+                                            <select class="custom-select" id="city">
+                                                <option selected>Selecciona tu Ciudad</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+
+                                            <label for="">Nomenclatura del Domicilio (Ej. Calle 5A Norte #25B-40) *</label>
+                                            <div class="form-row ">
+                                                <div class="col-md-3">
+                                                    
+                                                    <select class="custom-select">
+                                                        <option selected>Calle</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    
+                                                    <input type="text" name="pwd"
+                                                    placeholder="5A Norte" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    
+                                                    <input type="text" name="pwd"
+                                                    placeholder="#25B" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    
+                                                    <input type="text" name="pwd"
+                                                    placeholder="-40" />
+                                                </div>
+                                            </div>
+                                            <label for="city"> Complemento *</label>
+                                            <input type="text" name="lname"
+                                            placeholder=" Complemento (Ej. INT 2 AP 505)" />
+                                            <label for="city"> Barrio *</label>
+                                            <select class="custom-select" id="city">
+                                                <option selected>Selecciona tu Barrio</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <label for="city"> Si no encuentras tu Barrio en la lista, escríbelo aquí *</label>
+                                            <input type="text" name="lname"
+                                            placeholder="Escribe tu Barrio" />
+                                            <p class="form-paragraph">Los campos marcados con un “*” son campos obligatorios </p>
                                     </div> <input type="button" name="next" class="next action-button"
                                         value="Next Step" />
                                 </fieldset>

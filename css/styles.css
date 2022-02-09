@@ -52,15 +52,34 @@ html {
   color: #9E9E9E;
 }
 
+#msform label {
+  color: black;
+  font-size: 14px;
+}
+
+#msform select {
+  font-size: 14px;
+  margin-bottom: 21px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+#msform select option {
+  color: #2C3E50;
+  font-size: 14px;
+}
+
 #msform input,
 #msform textarea {
   padding: 0px 8px 4px 8px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  border-radius: 0px;
+  /* border: none; */
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  /* border-bottom: 1px solid #ccc; */
+  border-radius: 8px;
   margin-bottom: 25px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
   width: 100%;
+  height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: montserrat;
@@ -155,7 +174,7 @@ select.list-dt:focus {
 #progressbar li {
   list-style-type: none;
   font-size: 12px;
-  width: 25%;
+  width: 20%;
   float: left;
   position: relative;
 }
@@ -173,6 +192,11 @@ select.list-dt:focus {
 #progressbar #payment:before {
   font-family: FontAwesome;
   content: "\f09d";
+}
+
+#progressbar #commercial:before {
+  font-family: FontAwesome;
+  content: "\f00c";
 }
 
 #progressbar #confirm:before {
@@ -206,7 +230,7 @@ select.list-dt:focus {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: skyblue;
+  background: #774286;
 }
 
 .radio-group {
