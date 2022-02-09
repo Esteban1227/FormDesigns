@@ -3,13 +3,33 @@
     padding: 0
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 html {
-    height: 100%
+    height: 100%;
+}
+
+.developing{
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    p{
+        font-size: 25px;
+    }
+}
+
+.fa{
+    font-size: 150px;
 }
 
 #grad1 {
-    background-color: #9C27B0;
-    background-image: linear-gradient(120deg, #FF4081, #81D4FA)
+    background-color: #f2f2f2;
 }
 
 #msform {
@@ -23,7 +43,7 @@ html {
     border: 0 none;
     border-radius: 0px;
     /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
-    padding: 20px 40px 30px 40px;
+    padding: 20px 20px 0 20px;
     box-sizing: border-box;
     width: 94%;
     margin: 0 3% 20px 3%;
@@ -47,7 +67,7 @@ html {
 
 #msform fieldset .form-card {
     text-align: left;
-    color: #9E9E9E
+    color: $colorTextInputs;
 }
 
 #msform label{
@@ -57,15 +77,19 @@ html {
 
 #msform select{
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 21px;
     height: 50px;
     border-radius: 8px;
 }
 
-#msform select option{
-    color: #2C3E50;
-    font-size: 14px;
+.custom-select{
+    color: $colorTextInputs !important;
+    option{
+        color: black;
+    }
 }
+
 
 #msform input,
 #msform textarea {
@@ -79,10 +103,10 @@ html {
     width: 100%;
     height: 50px;
     box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
+    /* font-family: montserrat; */
+    color: $colorTextInputs;
     font-size: 16px;
-    letter-spacing: 1px
+    /* letter-spacing: 1px */
 }
 
 #msform input:focus,
@@ -91,43 +115,76 @@ html {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     border: none;
-    font-weight: bold;
-    border-bottom: 2px solid skyblue;
-    outline-width: 0
+    /* font-weight: bold; */
+    /* border-bottom: 2px solid skyblue; */
+    outline-width: 0;
+}
+
+.form-paragraph{
+    color: #6c757d;
+    font-size: 14px;
+}
+
+#msform .form{
+            &__input{
+                &--mariginButton{
+                margin-bottom:12px ;
+            }
+        }    
 }
 
 #msform .action-button {
-    width: 100px;
-    background: skyblue;
+    /* width: 100px; */
+    background: $colorPrimary   ;
     font-weight: bold;
+    font-size: 24px;
     color: white;
     border: 0 none;
-    border-radius: 0px;
+    border-radius: 8px;
+    /* border-radius: 0px; */
     cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px
+    /* padding: 0 5px; */
+    margin: 23px 0;
+    &--width{
+        width: 40%;
+        margin-left: 20px;
+    }
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+    /* box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue */
+    background-color: $colorHover;
 }
 
 #msform .action-button-previous {
-    width: 100px;
-    background: #616161;
+    /*   */
+    background: #ffffff;
     font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
+    font-size: 24px;
+    color:$colorTextInputs;
+    border: 1px solid $colorBorderInputs;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px
+    /* padding: 0   5px; */
+    margin: 23px 0;
+    width: 40%;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+    /* box-shadow: 0 0 0 2px white, 0 0 0 3px #616161 */
+    background-color: $colorSecundary;
+}
+.input-paragraph{
+    margin-top: 10px;
+}
+
+.input-link{
+    color: $colorPrimary;
+    &:hover{
+        color: $colorHover;
+    }
 }
 
 select.list-dt {
@@ -139,7 +196,7 @@ select.list-dt {
 }
 
 select.list-dt:focus {
-    border-bottom: 2px solid skyblue
+    /* border-bottom: 2px solid skyblue */
 }
 
 .card {
@@ -160,11 +217,13 @@ select.list-dt:focus {
 #progressbar {
     margin-bottom: 30px;
     overflow: hidden;
-    color: lightgrey
+    color: lightgrey;
 }
 
 #progressbar .active {
-    color: #000000
+    font-weight: bold;
+    font-size: 14px;
+    color: $colorPrimary;
 }
 
 #progressbar li {
@@ -175,30 +234,30 @@ select.list-dt:focus {
     position: relative
 }
 
-#progressbar #account:before {
+/* #progressbar #home:before {
     font-family: FontAwesome;
-    content: "\f023"
-}
+    content: "\f015"
+} */
 
-#progressbar #personal:before {
+/* #progressbar #personalInfo:before {
     font-family: FontAwesome;
     content: "\f007"
-}
+} */
 
-#progressbar #payment:before {
+/* #progressbar #files:before {
     font-family: FontAwesome;
     content: "\f09d"
-}
+} */
 
-#progressbar #commercial:before {
+/* #progressbar #commercial:before {
     font-family: FontAwesome;
     content: "\f00c"
-}
+} */
 
-#progressbar #confirm:before {
+/* #progressbar #userInfo:before {
     font-family: FontAwesome;
     content: "\f00c"
-}
+} */
 
 #progressbar li:before {
     width: 50px;
@@ -207,7 +266,20 @@ select.list-dt:focus {
     display: block;
     font-size: 18px;
     color: #ffffff;
-    background: lightgray;
+    background: lightgrey;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li i {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgrey;
     border-radius: 50%;
     margin: 0 auto 10px auto;
     padding: 2px
@@ -217,7 +289,7 @@ select.list-dt:focus {
     content: '';
     width: 100%;
     height: 2px;
-    background: lightgray;
+    background: lightgrey;
     position: absolute;
     left: 0;
     top: 25px;
@@ -226,6 +298,11 @@ select.list-dt:focus {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
+    background: $colorPrimary;
+}
+
+#progressbar li.active i,
+#progressbar li.active i {
     background: $colorPrimary;
 }
 

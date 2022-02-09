@@ -1,15 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   height: 100%;
 }
 
+.developing {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.developing p {
+  font-size: 25px;
+}
+
+.fa {
+  font-size: 150px;
+}
+
 #grad1 {
-  background-color: #9C27B0;
-  background-image: linear-gradient(120deg, #FF4081, #81D4FA);
+  background-color: #f2f2f2;
 }
 
 #msform {
@@ -23,7 +54,7 @@ html {
   border: 0 none;
   border-radius: 0px;
   /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
-  padding: 20px 40px 30px 40px;
+  padding: 20px 20px 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 94%;
@@ -49,7 +80,7 @@ html {
 
 #msform fieldset .form-card {
   text-align: left;
-  color: #9E9E9E;
+  color: lightgrey;
 }
 
 #msform label {
@@ -59,14 +90,18 @@ html {
 
 #msform select {
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 21px;
   height: 50px;
   border-radius: 8px;
 }
 
-#msform select option {
-  color: #2C3E50;
-  font-size: 14px;
+.custom-select {
+  color: lightgrey !important;
+}
+
+.custom-select option {
+  color: black;
 }
 
 #msform input,
@@ -82,10 +117,10 @@ html {
   height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: montserrat;
-  color: #2C3E50;
+  /* font-family: montserrat; */
+  color: lightgrey;
   font-size: 16px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px */
 }
 
 #msform input:focus,
@@ -93,45 +128,75 @@ html {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none;
-  font-weight: bold;
-  border-bottom: 2px solid skyblue;
+  /* font-weight: bold; */
+  /* border-bottom: 2px solid skyblue; */
   outline-width: 0;
 }
 
+.form-paragraph {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+#msform .form__input--mariginButton {
+  margin-bottom: 12px;
+}
+
 #msform .action-button {
-  width: 100px;
-  background: skyblue;
+  /* width: 100px; */
+  background: #67AD2B;
   font-weight: bold;
+  font-size: 24px;
   color: white;
   border: 0 none;
-  border-radius: 0px;
+  border-radius: 8px;
+  /* border-radius: 0px; */
   cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
+  /* padding: 0 5px; */
+  margin: 23px 0;
+}
+
+#msform .action-button--width {
+  width: 40%;
+  margin-left: 20px;
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
-          box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+  /* box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue */
+  background-color: #48771f;
 }
 
 #msform .action-button-previous {
-  width: 100px;
-  background: #616161;
+  /*   */
+  background: #ffffff;
   font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 0px;
+  font-size: 24px;
+  color: lightgrey;
+  border: 1px solid #808080;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
+  /* padding: 0   5px; */
+  margin: 23px 0;
+  width: 40%;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
-  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
-          box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+  /* box-shadow: 0 0 0 2px white, 0 0 0 3px #616161 */
+  background-color: #f2f2f2;
+}
+
+.input-paragraph {
+  margin-top: 10px;
+}
+
+.input-link {
+  color: #67AD2B;
+}
+
+.input-link:hover {
+  color: #48771f;
 }
 
 select.list-dt {
@@ -143,7 +208,7 @@ select.list-dt {
 }
 
 select.list-dt:focus {
-  border-bottom: 2px solid skyblue;
+  /* border-bottom: 2px solid skyblue */
 }
 
 .card {
@@ -168,7 +233,9 @@ select.list-dt:focus {
 }
 
 #progressbar .active {
-  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  color: #67AD2B;
 }
 
 #progressbar li {
@@ -179,31 +246,26 @@ select.list-dt:focus {
   position: relative;
 }
 
-#progressbar #account:before {
-  font-family: FontAwesome;
-  content: "\f023";
-}
-
-#progressbar #personal:before {
-  font-family: FontAwesome;
-  content: "\f007";
-}
-
-#progressbar #payment:before {
-  font-family: FontAwesome;
-  content: "\f09d";
-}
-
-#progressbar #commercial:before {
-  font-family: FontAwesome;
-  content: "\f00c";
-}
-
-#progressbar #confirm:before {
-  font-family: FontAwesome;
-  content: "\f00c";
-}
-
+/* #progressbar #home:before {
+    font-family: FontAwesome;
+    content: "\f015"
+} */
+/* #progressbar #personalInfo:before {
+    font-family: FontAwesome;
+    content: "\f007"
+} */
+/* #progressbar #files:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+} */
+/* #progressbar #commercial:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+} */
+/* #progressbar #userInfo:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+} */
 #progressbar li:before {
   width: 50px;
   height: 50px;
@@ -211,7 +273,20 @@ select.list-dt:focus {
   display: block;
   font-size: 18px;
   color: #ffffff;
-  background: lightgray;
+  background: lightgrey;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+}
+
+#progressbar li i {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  background: lightgrey;
   border-radius: 50%;
   margin: 0 auto 10px auto;
   padding: 2px;
@@ -221,7 +296,7 @@ select.list-dt:focus {
   content: '';
   width: 100%;
   height: 2px;
-  background: lightgray;
+  background: lightgrey;
   position: absolute;
   left: 0;
   top: 25px;
@@ -230,7 +305,12 @@ select.list-dt:focus {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #774286;
+  background: #67AD2B;
+}
+
+#progressbar li.active i,
+#progressbar li.active i {
+  background: #67AD2B;
 }
 
 .radio-group {
